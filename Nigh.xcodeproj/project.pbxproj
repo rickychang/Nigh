@@ -1,0 +1,478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		91CCC4C518F2FFBD00516844 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91CCC4C418F2FFBD00516844 /* Foundation.framework */; };
+		91CCC4C718F2FFBD00516844 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91CCC4C618F2FFBD00516844 /* CoreGraphics.framework */; };
+		91CCC4C918F2FFBD00516844 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91CCC4C818F2FFBD00516844 /* UIKit.framework */; };
+		91CCC4CF18F2FFBD00516844 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 91CCC4CD18F2FFBD00516844 /* InfoPlist.strings */; };
+		91CCC4D118F2FFBD00516844 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CCC4D018F2FFBD00516844 /* main.m */; };
+		91CCC4D518F2FFBD00516844 /* NGHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CCC4D418F2FFBD00516844 /* NGHAppDelegate.m */; };
+		91CCC4D818F2FFBD00516844 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91CCC4D618F2FFBD00516844 /* Main.storyboard */; };
+		91CCC4DB18F2FFBD00516844 /* NGHFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CCC4DA18F2FFBD00516844 /* NGHFirstViewController.m */; };
+		91CCC4DE18F2FFBD00516844 /* NGHSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CCC4DD18F2FFBD00516844 /* NGHSecondViewController.m */; };
+		91CCC4E018F2FFBD00516844 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91CCC4DF18F2FFBD00516844 /* Images.xcassets */; };
+		91CCC4E718F2FFBD00516844 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91CCC4E618F2FFBD00516844 /* XCTest.framework */; };
+		91CCC4E818F2FFBD00516844 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91CCC4C418F2FFBD00516844 /* Foundation.framework */; };
+		91CCC4E918F2FFBD00516844 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91CCC4C818F2FFBD00516844 /* UIKit.framework */; };
+		91CCC4F118F2FFBD00516844 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 91CCC4EF18F2FFBD00516844 /* InfoPlist.strings */; };
+		91CCC4F318F2FFBD00516844 /* NighTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CCC4F218F2FFBD00516844 /* NighTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		91CCC4EA18F2FFBD00516844 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 91CCC4B918F2FFBD00516844 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91CCC4C018F2FFBD00516844;
+			remoteInfo = Nigh;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		91CCC4C118F2FFBD00516844 /* Nigh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nigh.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		91CCC4C418F2FFBD00516844 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		91CCC4C618F2FFBD00516844 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		91CCC4C818F2FFBD00516844 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		91CCC4CC18F2FFBD00516844 /* Nigh-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Nigh-Info.plist"; sourceTree = "<group>"; };
+		91CCC4CE18F2FFBD00516844 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		91CCC4D018F2FFBD00516844 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		91CCC4D218F2FFBD00516844 /* Nigh-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Nigh-Prefix.pch"; sourceTree = "<group>"; };
+		91CCC4D318F2FFBD00516844 /* NGHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGHAppDelegate.h; sourceTree = "<group>"; };
+		91CCC4D418F2FFBD00516844 /* NGHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGHAppDelegate.m; sourceTree = "<group>"; };
+		91CCC4D718F2FFBD00516844 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		91CCC4D918F2FFBD00516844 /* NGHFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGHFirstViewController.h; sourceTree = "<group>"; };
+		91CCC4DA18F2FFBD00516844 /* NGHFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGHFirstViewController.m; sourceTree = "<group>"; };
+		91CCC4DC18F2FFBD00516844 /* NGHSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGHSecondViewController.h; sourceTree = "<group>"; };
+		91CCC4DD18F2FFBD00516844 /* NGHSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGHSecondViewController.m; sourceTree = "<group>"; };
+		91CCC4DF18F2FFBD00516844 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		91CCC4E518F2FFBD00516844 /* NighTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NighTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		91CCC4E618F2FFBD00516844 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		91CCC4EE18F2FFBD00516844 /* NighTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NighTests-Info.plist"; sourceTree = "<group>"; };
+		91CCC4F018F2FFBD00516844 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		91CCC4F218F2FFBD00516844 /* NighTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NighTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		91CCC4BE18F2FFBD00516844 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91CCC4C718F2FFBD00516844 /* CoreGraphics.framework in Frameworks */,
+				91CCC4C918F2FFBD00516844 /* UIKit.framework in Frameworks */,
+				91CCC4C518F2FFBD00516844 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91CCC4E218F2FFBD00516844 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91CCC4E718F2FFBD00516844 /* XCTest.framework in Frameworks */,
+				91CCC4E918F2FFBD00516844 /* UIKit.framework in Frameworks */,
+				91CCC4E818F2FFBD00516844 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		91CCC4B818F2FFBD00516844 = {
+			isa = PBXGroup;
+			children = (
+				91CCC4CA18F2FFBD00516844 /* Nigh */,
+				91CCC4EC18F2FFBD00516844 /* NighTests */,
+				91CCC4C318F2FFBD00516844 /* Frameworks */,
+				91CCC4C218F2FFBD00516844 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		91CCC4C218F2FFBD00516844 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				91CCC4C118F2FFBD00516844 /* Nigh.app */,
+				91CCC4E518F2FFBD00516844 /* NighTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		91CCC4C318F2FFBD00516844 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				91CCC4C418F2FFBD00516844 /* Foundation.framework */,
+				91CCC4C618F2FFBD00516844 /* CoreGraphics.framework */,
+				91CCC4C818F2FFBD00516844 /* UIKit.framework */,
+				91CCC4E618F2FFBD00516844 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		91CCC4CA18F2FFBD00516844 /* Nigh */ = {
+			isa = PBXGroup;
+			children = (
+				91CCC4D318F2FFBD00516844 /* NGHAppDelegate.h */,
+				91CCC4D418F2FFBD00516844 /* NGHAppDelegate.m */,
+				91CCC4D618F2FFBD00516844 /* Main.storyboard */,
+				91CCC4D918F2FFBD00516844 /* NGHFirstViewController.h */,
+				91CCC4DA18F2FFBD00516844 /* NGHFirstViewController.m */,
+				91CCC4DC18F2FFBD00516844 /* NGHSecondViewController.h */,
+				91CCC4DD18F2FFBD00516844 /* NGHSecondViewController.m */,
+				91CCC4DF18F2FFBD00516844 /* Images.xcassets */,
+				91CCC4CB18F2FFBD00516844 /* Supporting Files */,
+			);
+			path = Nigh;
+			sourceTree = "<group>";
+		};
+		91CCC4CB18F2FFBD00516844 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				91CCC4CC18F2FFBD00516844 /* Nigh-Info.plist */,
+				91CCC4CD18F2FFBD00516844 /* InfoPlist.strings */,
+				91CCC4D018F2FFBD00516844 /* main.m */,
+				91CCC4D218F2FFBD00516844 /* Nigh-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		91CCC4EC18F2FFBD00516844 /* NighTests */ = {
+			isa = PBXGroup;
+			children = (
+				91CCC4F218F2FFBD00516844 /* NighTests.m */,
+				91CCC4ED18F2FFBD00516844 /* Supporting Files */,
+			);
+			path = NighTests;
+			sourceTree = "<group>";
+		};
+		91CCC4ED18F2FFBD00516844 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				91CCC4EE18F2FFBD00516844 /* NighTests-Info.plist */,
+				91CCC4EF18F2FFBD00516844 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		91CCC4C018F2FFBD00516844 /* Nigh */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91CCC4F618F2FFBD00516844 /* Build configuration list for PBXNativeTarget "Nigh" */;
+			buildPhases = (
+				91CCC4BD18F2FFBD00516844 /* Sources */,
+				91CCC4BE18F2FFBD00516844 /* Frameworks */,
+				91CCC4BF18F2FFBD00516844 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Nigh;
+			productName = Nigh;
+			productReference = 91CCC4C118F2FFBD00516844 /* Nigh.app */;
+			productType = "com.apple.product-type.application";
+		};
+		91CCC4E418F2FFBD00516844 /* NighTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91CCC4F918F2FFBD00516844 /* Build configuration list for PBXNativeTarget "NighTests" */;
+			buildPhases = (
+				91CCC4E118F2FFBD00516844 /* Sources */,
+				91CCC4E218F2FFBD00516844 /* Frameworks */,
+				91CCC4E318F2FFBD00516844 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				91CCC4EB18F2FFBD00516844 /* PBXTargetDependency */,
+			);
+			name = NighTests;
+			productName = NighTests;
+			productReference = 91CCC4E518F2FFBD00516844 /* NighTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		91CCC4B918F2FFBD00516844 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = NGH;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Ricky Chang";
+				TargetAttributes = {
+					91CCC4E418F2FFBD00516844 = {
+						TestTargetID = 91CCC4C018F2FFBD00516844;
+					};
+				};
+			};
+			buildConfigurationList = 91CCC4BC18F2FFBD00516844 /* Build configuration list for PBXProject "Nigh" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 91CCC4B818F2FFBD00516844;
+			productRefGroup = 91CCC4C218F2FFBD00516844 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				91CCC4C018F2FFBD00516844 /* Nigh */,
+				91CCC4E418F2FFBD00516844 /* NighTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		91CCC4BF18F2FFBD00516844 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91CCC4E018F2FFBD00516844 /* Images.xcassets in Resources */,
+				91CCC4CF18F2FFBD00516844 /* InfoPlist.strings in Resources */,
+				91CCC4D818F2FFBD00516844 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91CCC4E318F2FFBD00516844 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91CCC4F118F2FFBD00516844 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		91CCC4BD18F2FFBD00516844 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91CCC4DE18F2FFBD00516844 /* NGHSecondViewController.m in Sources */,
+				91CCC4DB18F2FFBD00516844 /* NGHFirstViewController.m in Sources */,
+				91CCC4D518F2FFBD00516844 /* NGHAppDelegate.m in Sources */,
+				91CCC4D118F2FFBD00516844 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91CCC4E118F2FFBD00516844 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91CCC4F318F2FFBD00516844 /* NighTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		91CCC4EB18F2FFBD00516844 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 91CCC4C018F2FFBD00516844 /* Nigh */;
+			targetProxy = 91CCC4EA18F2FFBD00516844 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		91CCC4CD18F2FFBD00516844 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91CCC4CE18F2FFBD00516844 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		91CCC4D618F2FFBD00516844 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91CCC4D718F2FFBD00516844 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		91CCC4EF18F2FFBD00516844 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91CCC4F018F2FFBD00516844 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		91CCC4F418F2FFBD00516844 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		91CCC4F518F2FFBD00516844 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		91CCC4F718F2FFBD00516844 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Nigh/Nigh-Prefix.pch";
+				INFOPLIST_FILE = "Nigh/Nigh-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		91CCC4F818F2FFBD00516844 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Nigh/Nigh-Prefix.pch";
+				INFOPLIST_FILE = "Nigh/Nigh-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		91CCC4FA18F2FFBD00516844 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Nigh.app/Nigh";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Nigh/Nigh-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "NighTests/NighTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		91CCC4FB18F2FFBD00516844 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Nigh.app/Nigh";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Nigh/Nigh-Prefix.pch";
+				INFOPLIST_FILE = "NighTests/NighTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		91CCC4BC18F2FFBD00516844 /* Build configuration list for PBXProject "Nigh" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91CCC4F418F2FFBD00516844 /* Debug */,
+				91CCC4F518F2FFBD00516844 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91CCC4F618F2FFBD00516844 /* Build configuration list for PBXNativeTarget "Nigh" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91CCC4F718F2FFBD00516844 /* Debug */,
+				91CCC4F818F2FFBD00516844 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		91CCC4F918F2FFBD00516844 /* Build configuration list for PBXNativeTarget "NighTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91CCC4FA18F2FFBD00516844 /* Debug */,
+				91CCC4FB18F2FFBD00516844 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 91CCC4B918F2FFBD00516844 /* Project object */;
+}
