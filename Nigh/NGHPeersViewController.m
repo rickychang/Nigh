@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Ricky Chang. All rights reserved.
 //
 
-#import "NGHSecondViewController.h"
+#import "NGHPeersViewController.h"
 
-@interface NGHSecondViewController ()
+@interface NGHPeersViewController ()
 
 @end
 
-@implementation NGHSecondViewController
+@implementation NGHPeersViewController
 
 - (void)viewDidLoad
 {

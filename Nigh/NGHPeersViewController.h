@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NGHSecondViewController : UIViewController
+@interface NGHPeersViewController : UIViewController
 
 @end

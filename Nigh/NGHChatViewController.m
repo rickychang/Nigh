@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Ricky Chang. All rights reserved.
 //
 
-#import "NGHFirstViewController.h"
+#import "NGHChatViewController.h"
 
-@interface NGHFirstViewController ()
+@interface NGHChatViewController ()
 
 @end
 
-@implementation NGHFirstViewController
+@implementation NGHChatViewController
 
 - (void)viewDidLoad
 {

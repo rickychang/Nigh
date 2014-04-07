@@ -14,14 +14,16 @@
 		91CCC4D118F2FFBD00516844 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CCC4D018F2FFBD00516844 /* main.m */; };
 		91CCC4D518F2FFBD00516844 /* NGHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CCC4D418F2FFBD00516844 /* NGHAppDelegate.m */; };
 		91CCC4D818F2FFBD00516844 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91CCC4D618F2FFBD00516844 /* Main.storyboard */; };
-		91CCC4DB18F2FFBD00516844 /* NGHFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CCC4DA18F2FFBD00516844 /* NGHFirstViewController.m */; };
-		91CCC4DE18F2FFBD00516844 /* NGHSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CCC4DD18F2FFBD00516844 /* NGHSecondViewController.m */; };
+		91CCC4DB18F2FFBD00516844 /* NGHChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CCC4DA18F2FFBD00516844 /* NGHChatViewController.m */; };
+		91CCC4DE18F2FFBD00516844 /* NGHPeersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CCC4DD18F2FFBD00516844 /* NGHPeersViewController.m */; };
 		91CCC4E018F2FFBD00516844 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91CCC4DF18F2FFBD00516844 /* Images.xcassets */; };
 		91CCC4E718F2FFBD00516844 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91CCC4E618F2FFBD00516844 /* XCTest.framework */; };
 		91CCC4E818F2FFBD00516844 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91CCC4C418F2FFBD00516844 /* Foundation.framework */; };
 		91CCC4E918F2FFBD00516844 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91CCC4C818F2FFBD00516844 /* UIKit.framework */; };
 		91CCC4F118F2FFBD00516844 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 91CCC4EF18F2FFBD00516844 /* InfoPlist.strings */; };
 		91CCC4F318F2FFBD00516844 /* NighTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CCC4F218F2FFBD00516844 /* NighTests.m */; };
+		91CCC4FD18F2FFE700516844 /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91CCC4FC18F2FFE700516844 /* MultipeerConnectivity.framework */; };
+		91CCC4FF18F3000C00516844 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91CCC4FE18F3000C00516844 /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,16 +48,18 @@
 		91CCC4D318F2FFBD00516844 /* NGHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGHAppDelegate.h; sourceTree = "<group>"; };
 		91CCC4D418F2FFBD00516844 /* NGHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGHAppDelegate.m; sourceTree = "<group>"; };
 		91CCC4D718F2FFBD00516844 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		91CCC4D918F2FFBD00516844 /* NGHFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGHFirstViewController.h; sourceTree = "<group>"; };
-		91CCC4DA18F2FFBD00516844 /* NGHFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGHFirstViewController.m; sourceTree = "<group>"; };
-		91CCC4DC18F2FFBD00516844 /* NGHSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGHSecondViewController.h; sourceTree = "<group>"; };
-		91CCC4DD18F2FFBD00516844 /* NGHSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGHSecondViewController.m; sourceTree = "<group>"; };
+		91CCC4D918F2FFBD00516844 /* NGHChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGHChatViewController.h; sourceTree = "<group>"; };
+		91CCC4DA18F2FFBD00516844 /* NGHChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGHChatViewController.m; sourceTree = "<group>"; };
+		91CCC4DC18F2FFBD00516844 /* NGHPeersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGHPeersViewController.h; sourceTree = "<group>"; };
+		91CCC4DD18F2FFBD00516844 /* NGHPeersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGHPeersViewController.m; sourceTree = "<group>"; };
 		91CCC4DF18F2FFBD00516844 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		91CCC4E518F2FFBD00516844 /* NighTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NighTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91CCC4E618F2FFBD00516844 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		91CCC4EE18F2FFBD00516844 /* NighTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NighTests-Info.plist"; sourceTree = "<group>"; };
 		91CCC4F018F2FFBD00516844 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		91CCC4F218F2FFBD00516844 /* NighTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NighTests.m; sourceTree = "<group>"; };
+		91CCC4FC18F2FFE700516844 /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
+		91CCC4FE18F3000C00516844 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91CCC4FF18F3000C00516844 /* MediaPlayer.framework in Frameworks */,
+				91CCC4FD18F2FFE700516844 /* MultipeerConnectivity.framework in Frameworks */,
 				91CCC4C718F2FFBD00516844 /* CoreGraphics.framework in Frameworks */,
 				91CCC4C918F2FFBD00516844 /* UIKit.framework in Frameworks */,
 				91CCC4C518F2FFBD00516844 /* Foundation.framework in Frameworks */,
@@ -104,6 +110,8 @@
 		91CCC4C318F2FFBD00516844 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				91CCC4FE18F3000C00516844 /* MediaPlayer.framework */,
+				91CCC4FC18F2FFE700516844 /* MultipeerConnectivity.framework */,
 				91CCC4C418F2FFBD00516844 /* Foundation.framework */,
 				91CCC4C618F2FFBD00516844 /* CoreGraphics.framework */,
 				91CCC4C818F2FFBD00516844 /* UIKit.framework */,
@@ -118,10 +126,10 @@
 				91CCC4D318F2FFBD00516844 /* NGHAppDelegate.h */,
 				91CCC4D418F2FFBD00516844 /* NGHAppDelegate.m */,
 				91CCC4D618F2FFBD00516844 /* Main.storyboard */,
-				91CCC4D918F2FFBD00516844 /* NGHFirstViewController.h */,
-				91CCC4DA18F2FFBD00516844 /* NGHFirstViewController.m */,
-				91CCC4DC18F2FFBD00516844 /* NGHSecondViewController.h */,
-				91CCC4DD18F2FFBD00516844 /* NGHSecondViewController.m */,
+				91CCC4D918F2FFBD00516844 /* NGHChatViewController.h */,
+				91CCC4DA18F2FFBD00516844 /* NGHChatViewController.m */,
+				91CCC4DC18F2FFBD00516844 /* NGHPeersViewController.h */,
+				91CCC4DD18F2FFBD00516844 /* NGHPeersViewController.m */,
 				91CCC4DF18F2FFBD00516844 /* Images.xcassets */,
 				91CCC4CB18F2FFBD00516844 /* Supporting Files */,
 			);
@@ -255,8 +263,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91CCC4DE18F2FFBD00516844 /* NGHSecondViewController.m in Sources */,
-				91CCC4DB18F2FFBD00516844 /* NGHFirstViewController.m in Sources */,
+				91CCC4DE18F2FFBD00516844 /* NGHPeersViewController.m in Sources */,
+				91CCC4DB18F2FFBD00516844 /* NGHChatViewController.m in Sources */,
 				91CCC4D518F2FFBD00516844 /* NGHAppDelegate.m in Sources */,
 				91CCC4D118F2FFBD00516844 /* main.m in Sources */,
 			);

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NGHFirstViewController : UIViewController
+@interface NGHChatViewController : UIViewController
 
 @end
