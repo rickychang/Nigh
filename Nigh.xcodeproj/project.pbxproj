@@ -24,6 +24,7 @@
 		91CCC4F318F2FFBD00516844 /* NighTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CCC4F218F2FFBD00516844 /* NighTests.m */; };
 		91CCC4FD18F2FFE700516844 /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91CCC4FC18F2FFE700516844 /* MultipeerConnectivity.framework */; };
 		91CCC4FF18F3000C00516844 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91CCC4FE18F3000C00516844 /* MediaPlayer.framework */; };
+		91CCC50318F311CE00516844 /* NGHMultipeerSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CCC50218F311CE00516844 /* NGHMultipeerSessionManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,9 @@
 		91CCC4F218F2FFBD00516844 /* NighTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NighTests.m; sourceTree = "<group>"; };
 		91CCC4FC18F2FFE700516844 /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
 		91CCC4FE18F3000C00516844 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		91CCC50118F311CE00516844 /* NGHMultipeerSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGHMultipeerSessionManager.h; sourceTree = "<group>"; };
+		91CCC50218F311CE00516844 /* NGHMultipeerSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGHMultipeerSessionManager.m; sourceTree = "<group>"; };
+		91CCC50418F3139800516844 /* Globals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,7 @@
 		91CCC4CA18F2FFBD00516844 /* Nigh */ = {
 			isa = PBXGroup;
 			children = (
+				91CCC50018F310F000516844 /* Models */,
 				91CCC4D318F2FFBD00516844 /* NGHAppDelegate.h */,
 				91CCC4D418F2FFBD00516844 /* NGHAppDelegate.m */,
 				91CCC4D618F2FFBD00516844 /* Main.storyboard */,
@@ -132,6 +137,7 @@
 				91CCC4DD18F2FFBD00516844 /* NGHPeersViewController.m */,
 				91CCC4DF18F2FFBD00516844 /* Images.xcassets */,
 				91CCC4CB18F2FFBD00516844 /* Supporting Files */,
+				91CCC50418F3139800516844 /* Globals.h */,
 			);
 			path = Nigh;
 			sourceTree = "<group>";
@@ -163,6 +169,15 @@
 				91CCC4EF18F2FFBD00516844 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		91CCC50018F310F000516844 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				91CCC50118F311CE00516844 /* NGHMultipeerSessionManager.h */,
+				91CCC50218F311CE00516844 /* NGHMultipeerSessionManager.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91CCC4DE18F2FFBD00516844 /* NGHPeersViewController.m in Sources */,
+				91CCC50318F311CE00516844 /* NGHMultipeerSessionManager.m in Sources */,
 				91CCC4DB18F2FFBD00516844 /* NGHChatViewController.m in Sources */,
 				91CCC4D518F2FFBD00516844 /* NGHAppDelegate.m in Sources */,
 				91CCC4D118F2FFBD00516844 /* main.m in Sources */,
