@@ -10,6 +10,7 @@
 
 @interface NGHChatViewController ()
 
+
 @end
 
 @implementation NGHChatViewController
