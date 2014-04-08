@@ -7,6 +7,7 @@
 //
 
 #import "NGHMultipeerSessionManager.h"
+#import <JSMessagesViewController/JSMessage.h>
 
 @implementation NGHMultipeerSessionManager
 
@@ -119,7 +120,7 @@
                            @"state" : [NSNumber numberWithInt:state]
                            };
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"MCDidChangeStateNotification"
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"NGHDidChangeStateNotification"
                                                         object:nil
                                                       userInfo:dict];
     
@@ -127,11 +128,11 @@
 
 
 -(void)session:(MCSession *)session didReceiveData:(NSData *)data fromPeer:(MCPeerID *)peerID {
-    NSDictionary *dict = @{@"data": data,
-                           @"peerID": peerID
-                           };
+    NSLog(@"did received data");
+    JSMessage *incomingMessage = (JSMessage*)[NSKeyedUnarchiver unarchiveObjectWithData:data];
+    NSDictionary *dict = @{@"incomingMessage": incomingMessage};
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"MCDidReceiveDataNotification"
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"NGHChatMessageReceived"
                                                         object:nil
                                                       userInfo:dict];
 }

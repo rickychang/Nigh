@@ -44,14 +44,19 @@
                                                  name:@"NGHPeerInitializedWithDisplayName"
                                                object:nil];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(multipeerMessageReceivedNotification:)
+                                                 name:@"NGHChatMessageReceived"
+                                               object:nil];
+    
     [self setBackgroundColor:[UIColor whiteColor]];
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    [self scrollToBottomAnimated:NO];
-}
+//- (void)viewWillAppear:(BOOL)animated
+//{
+//    [super viewWillAppear:animated];
+//    [self scrollToBottomAnimated:NO];
+//}
 
 
 - (void)didReceiveMemoryWarning
@@ -65,14 +70,30 @@
     self.sender = displayName;
 }
 
+-(void)multipeerMessageReceivedNotification:(NSNotification *)notification {
+    NSLog(@"multipeerMessageReceivedNoficiation called");
+    JSMessage *incomingMessage = [[notification userInfo] objectForKey:@"incomingMessage"];
+    [self.messages addObject:incomingMessage];
+    [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
+}
+
 #pragma mark JSMessagesViewDelegate
 
 
 - (void)didSendText:(NSString *)text fromSender:(NSString *)sender onDate:(NSDate *)date {
     NSLog(@"did send text: %@", text);
-    [self.messages addObject:[[JSMessage alloc] initWithText:text sender:sender date:date]];
+    JSMessage *newMessage = [[JSMessage alloc] initWithText:text sender:sender date:date];
+
+    [self.messages addObject:newMessage];
+    
+    // Track index of message we are sending
     NSNumber *messageIndex = [NSNumber numberWithInteger:self.messages.count - 1];
     [self.sentMessageIndices addObject:messageIndex];
+    
+    // Very simple message serialization, reuse model class for chat view. Will need to change to support other message types.
+    NSData* dataToSend = [NSKeyedArchiver archivedDataWithRootObject:newMessage];
+
+    [self.sessionManager.session sendData:dataToSend toPeers:self.sessionManager.session.connectedPeers withMode:MCSessionSendDataReliable error:nil];
     [self finishSend];
     [self scrollToBottomAnimated:YES];
     
