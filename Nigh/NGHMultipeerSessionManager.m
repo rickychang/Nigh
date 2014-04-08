@@ -56,6 +56,11 @@
 -(void)initPeerWithDisplayName:(NSString *)displayName
 {
     _myPeerID = [[MCPeerID alloc] initWithDisplayName:displayName];
+    NSDictionary *dict = @{@"displayName": displayName};
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"NGHPeerInitializedWithDisplayName"
+                                                        object:nil
+                                                      userInfo:dict];
 }
 
 - (void)setupSession {

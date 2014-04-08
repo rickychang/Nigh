@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <JSMessagesViewController/JSMessagesViewController.h>
+#import "NGHMultipeerSessionManager.h"
 
-@interface NGHChatViewController : UIViewController
+@interface NGHChatViewController : JSMessagesViewController<JSMessagesViewDelegate, JSMessagesViewDataSource>
+
+@property (strong, nonatomic) NSMutableArray *messages;
+@property (strong, nonatomic) NGHMultipeerSessionManager *sessionManager;
+// TODO: add avatar support
 
 @end
