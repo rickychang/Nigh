@@ -80,6 +80,9 @@
     JSMessage *incomingMessage = [[notification userInfo] objectForKey:@"incomingMessage"];
     [self.messages addObject:incomingMessage];
     [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
+    [self performSelectorOnMainThread:@selector(scrollToBottomAnimated:) withObject:@"1" waitUntilDone:NO];
+
+
 }
 
 -(void)reloadMessageTableView:(NSNotification *)notification {
