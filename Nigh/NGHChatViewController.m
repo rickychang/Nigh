@@ -20,10 +20,10 @@
 
 - (void)viewDidLoad
 {
-    NSLog(@"viewDidLoad called.");
     self.delegate = self;
     self.dataSource = self;
     [super viewDidLoad];
+    
     
     [[JSBubbleView appearance] setFont:[UIFont systemFontOfSize:16.0f]];
     
@@ -47,6 +47,11 @@
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(multipeerMessageReceivedNotification:)
                                                  name:@"NGHChatMessageReceived"
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(reloadMessageTableView:)
+                                                 name:@"NGHDidChangeStateNotification"
                                                object:nil];
     
     [self setBackgroundColor:[UIColor whiteColor]];
@@ -77,13 +82,17 @@
     [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
 }
 
+-(void)reloadMessageTableView:(NSNotification *)notification {
+    [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
+}
+
 #pragma mark JSMessagesViewDelegate
 
 
 - (void)didSendText:(NSString *)text fromSender:(NSString *)sender onDate:(NSDate *)date {
     NSLog(@"did send text: %@", text);
     JSMessage *newMessage = [[JSMessage alloc] initWithText:text sender:sender date:date];
-
+    
     [self.messages addObject:newMessage];
     
     // Track index of message we are sending
@@ -92,7 +101,7 @@
     
     // Very simple message serialization, reuse model class for chat view. Will need to change to support other message types.
     NSData* dataToSend = [NSKeyedArchiver archivedDataWithRootObject:newMessage];
-
+    
     [self.sessionManager.session sendData:dataToSend toPeers:self.sessionManager.session.connectedPeers withMode:MCSessionSendDataReliable error:nil];
     [self finishSend];
     [self scrollToBottomAnimated:YES];
@@ -179,6 +188,20 @@
     return self.messages.count;
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    NSInteger peers = [self.sessionManager.session.connectedPeers count];
+    
+    switch (peers)
+    {
+        case 0:
+            return @"No Peers";
+        case 1:
+            return @"1 Peer";
+        default:
+            return [NSString stringWithFormat:@"%d Peers", peers];
+    }
+}
 
 
 
