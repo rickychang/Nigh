@@ -57,11 +57,11 @@
     [self setBackgroundColor:[UIColor whiteColor]];
 }
 
-//- (void)viewWillAppear:(BOOL)animated
-//{
-//    [super viewWillAppear:animated];
-//    [self scrollToBottomAnimated:NO];
-//}
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self scrollToBottomAnimated:NO];
+}
 
 
 - (void)didReceiveMemoryWarning
