@@ -9,6 +9,7 @@
 #import "NGHChatViewController.h"
 #import "NGHAppDelegate.h"
 #import <JSMessagesViewController/JSMessage.h>
+#import "NGHChatMessage.h"
 
 @interface NGHChatViewController ()
 
@@ -57,11 +58,11 @@
     [self setBackgroundColor:[UIColor whiteColor]];
 }
 
-//- (void)viewWillAppear:(BOOL)animated
-//{
-//    [super viewWillAppear:animated];
-//    [self scrollToBottomAnimated:NO];
-//}
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self scrollToBottomAnimated:NO];
+}
 
 
 - (void)didReceiveMemoryWarning
@@ -77,7 +78,7 @@
 
 -(void)multipeerMessageReceivedNotification:(NSNotification *)notification {
     NSLog(@"multipeerMessageReceivedNoficiation called");
-    JSMessage *incomingMessage = [[notification userInfo] objectForKey:@"incomingMessage"];
+    NGHChatMessage *incomingMessage = [[notification userInfo] objectForKey:@"incomingMessage"];
     [self.messages addObject:incomingMessage];
     [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
     [self performSelectorOnMainThread:@selector(scrollToBottomAnimated:) withObject:@"1" waitUntilDone:NO];
@@ -94,7 +95,7 @@
 
 - (void)didSendText:(NSString *)text fromSender:(NSString *)sender onDate:(NSDate *)date {
     NSLog(@"did send text: %@", text);
-    JSMessage *newMessage = [[JSMessage alloc] initWithText:text sender:sender date:date];
+    NGHChatMessage *newMessage = [[NGHChatMessage alloc] initWithText:text sender:sender date:date];
     
     [self.messages addObject:newMessage];
     

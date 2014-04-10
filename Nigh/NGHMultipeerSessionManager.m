@@ -8,6 +8,8 @@
 
 #import "NGHMultipeerSessionManager.h"
 #import <JSMessagesViewController/JSMessage.h>
+#import "NGHMultipeerMessage.h"
+#import "NGHChatMessage.h"
 
 @implementation NGHMultipeerSessionManager
 
@@ -129,14 +131,19 @@
 
 -(void)session:(MCSession *)session didReceiveData:(NSData *)data fromPeer:(MCPeerID *)peerID {
     NSLog(@"did received data");
-    JSMessage *incomingMessage = (JSMessage*)[NSKeyedUnarchiver unarchiveObjectWithData:data];
-    NSDictionary *dict = @{@"incomingMessage": incomingMessage};
-    
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"NGHChatMessageReceived"
-                                                        object:nil
-                                                      userInfo:dict];
-}
+    id<NGHMultipeerMessage> incomingMessage = (id<NGHMultipeerMessage>)[NSKeyedUnarchiver unarchiveObjectWithData:data];
+    switch ([incomingMessage messageType]) {
+        case NGHMessageTypeChat:
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"NGHChatMessageReceived"
+                                                                object:nil
+                                                              userInfo: @{@"incomingMessage": incomingMessage}];
+            break;
+        default:
+            NSLog(@"Unhandled incoming message: %@", [incomingMessage text]);
+            break;
+    }
 
+}
 
 -(void)session:(MCSession *)session didStartReceivingResourceWithName:(NSString *)resourceName fromPeer:(MCPeerID *)peerID withProgress:(NSProgress *)progress {
     
