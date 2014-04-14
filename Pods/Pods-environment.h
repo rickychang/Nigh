@@ -24,3 +24,9 @@
 #define COCOAPODS_VERSION_MINOR_JSQSystemSoundPlayer 4
 #define COCOAPODS_VERSION_PATCH_JSQSystemSoundPlayer 0
 
+// TDAudioPlayer
+#define COCOAPODS_POD_AVAILABLE_TDAudioPlayer
+#define COCOAPODS_VERSION_MAJOR_TDAudioPlayer 0
+#define COCOAPODS_VERSION_MINOR_TDAudioPlayer 0
+#define COCOAPODS_VERSION_PATCH_TDAudioPlayer 5
+

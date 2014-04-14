@@ -123,7 +123,7 @@
     [self startServices];
 }
 
-// TODO: Use a different notification because this is being called too oftern.
+// TODO: Use a different notification because this is being called too often.
 -(void)inAppSettingChanged:(NSNotification *)notification {
     NSString *key = (NSString *)[notification object];
     if ([key isEqualToString:@"name_preference"]) {

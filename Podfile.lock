@@ -3,14 +3,17 @@ PODS:
   - JSMessagesViewController (4.0.2):
     - JSQSystemSoundPlayer
   - JSQSystemSoundPlayer (1.4.0)
+  - TDAudioPlayer (0.0.5)
 
 DEPENDENCIES:
   - InAppSettingsKit
   - JSMessagesViewController
+  - TDAudioPlayer
 
 SPEC CHECKSUMS:
   InAppSettingsKit: 5e42f626b9be9c33e3b04c0cc9523ca5eabe7ad3
   JSMessagesViewController: 901c4f7b805e0990705d92eee8069562ac85bf9b
   JSQSystemSoundPlayer: 28ccd01a92a0cebc6de6361e8499011b4cb6dab7
+  TDAudioPlayer: e246c80c4b3c77eb764c7f49f011ab15c2d67470
 
 COCOAPODS: 0.31.1

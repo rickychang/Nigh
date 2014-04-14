@@ -32,4 +32,9 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+-(void)synchronizeSettings {
+    [super synchronizeSettings];
+    NSLog(@"synchornizeSettings called.");
+}
+
 @end
