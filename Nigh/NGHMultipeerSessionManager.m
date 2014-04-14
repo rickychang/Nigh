@@ -23,7 +23,9 @@
     self = [super init];
     
     if (self) {
-        [self initPeerWithDisplayName:[[UIDevice currentDevice] name]];
+        NSString *nameFromPreferences = [[NSUserDefaults standardUserDefaults] stringForKey:@"name_preference"];
+        NSString *displayName = (nameFromPreferences) ? nameFromPreferences : [[UIDevice currentDevice] name];
+        [self initPeerWithDisplayName:displayName];
         _session = nil;
         _advertiser = nil;
         _browser = nil;
