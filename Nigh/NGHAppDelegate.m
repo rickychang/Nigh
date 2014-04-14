@@ -10,9 +10,11 @@
 
 @implementation NGHAppDelegate
 
+@synthesize sessionManager;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    _sessionManager = [[NGHMultipeerSessionManager alloc] init];
+    sessionManager = [[NGHMultipeerSessionManager alloc] init];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *name = [defaults stringForKey:@"name_preference"];
     NSLog(@"%@", name);
@@ -45,5 +47,13 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
++(NGHMultipeerSessionManager*)globalSessionManager {
+    
+    NGHAppDelegate * appDelegate = (NGHAppDelegate*)[[UIApplication sharedApplication] delegate];
+    
+    return appDelegate.sessionManager;
+}
+
 
 @end

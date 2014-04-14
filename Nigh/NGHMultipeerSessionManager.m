@@ -12,6 +12,8 @@
 #import "NGHChatMessage.h"
 
 
+#define STATE_CONNECTED @"Connected"
+
 
 @implementation NGHMultipeerSessionManager
 
@@ -29,6 +31,8 @@
         _session = nil;
         _advertiser = nil;
         _browser = nil;
+        
+        _connectedPeers = [[NSMutableDictionary alloc] init];
         
         NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
         
@@ -115,7 +119,7 @@
 -(NSString *)stringForPeerConnectionState:(MCSessionState)state {
     switch (state) {
         case MCSessionStateConnected:
-            return @"Connected";
+            return STATE_CONNECTED;
             
         case MCSessionStateConnecting:
             return @"Connecting";
@@ -134,9 +138,20 @@
                            @"state" : [NSNumber numberWithInt:state]
                            };
     
+    
+    // stash this one.
+    if ([[self stringForPeerConnectionState:state] isEqualToString:STATE_CONNECTED]) {
+        [_connectedPeers setObject:[NSNumber numberWithInt:state]
+                            forKey:peerID.displayName];
+    }
+    else {
+        [_connectedPeers removeObjectForKey:peerID.displayName];
+    }
+    
     [[NSNotificationCenter defaultCenter] postNotificationName:@"NGHDidChangeStateNotification"
                                                         object:nil
                                                       userInfo:dict];
+    
     
 }
 
@@ -242,5 +257,10 @@ withDiscoveryInfo:(NSDictionary *)info {
 
 
 
+# pragma mark - methods for music display methods
+-(BOOL)hasPeerConnection {
+    // check if there are any keys.
+    return ([[_connectedPeers allKeys] count] > 0);
+}
 
 @end

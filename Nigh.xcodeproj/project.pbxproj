@@ -30,6 +30,7 @@
 		91CCC50318F311CE00516844 /* NGHMultipeerSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CCC50218F311CE00516844 /* NGHMultipeerSessionManager.m */; };
 		91D21D2C18F71AB100ECA489 /* NGHChatMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D21D2B18F71AB100ECA489 /* NGHChatMessage.m */; };
 		E0BEA5D718FB649C00B18A7A /* NGHUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E0BEA5D618FB649C00B18A7A /* NGHUtils.m */; };
+		E0BEA5DA18FB845200B18A7A /* NGHPeerListeningListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E0BEA5D918FB845200B18A7A /* NGHPeerListeningListVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,8 @@
 		DA6C8254324B419481DAAD05 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0BEA5D518FB649C00B18A7A /* NGHUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGHUtils.h; sourceTree = "<group>"; };
 		E0BEA5D618FB649C00B18A7A /* NGHUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGHUtils.m; sourceTree = "<group>"; };
+		E0BEA5D818FB845200B18A7A /* NGHPeerListeningListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGHPeerListeningListVC.h; sourceTree = "<group>"; };
+		E0BEA5D918FB845200B18A7A /* NGHPeerListeningListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGHPeerListeningListVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,15 +160,17 @@
 				9172A00018FB6E6300B36A95 /* NGHSettingsViewController.m */,
 				91729FFE18FB61E300B36A95 /* Resources */,
 				91CCC50018F310F000516844 /* Models */,
-				91CCC4D318F2FFBD00516844 /* NGHAppDelegate.h */,
-				91CCC4D418F2FFBD00516844 /* NGHAppDelegate.m */,
 				91CCC4D618F2FFBD00516844 /* Main.storyboard */,
 				91CCC4D918F2FFBD00516844 /* NGHChatViewController.h */,
 				91CCC4DA18F2FFBD00516844 /* NGHChatViewController.m */,
 				91CCC4DC18F2FFBD00516844 /* NGHPeersViewController.h */,
 				91CCC4DD18F2FFBD00516844 /* NGHPeersViewController.m */,
+				E0BEA5D818FB845200B18A7A /* NGHPeerListeningListVC.h */,
+				E0BEA5D918FB845200B18A7A /* NGHPeerListeningListVC.m */,
 				E0BEA5D518FB649C00B18A7A /* NGHUtils.h */,
 				E0BEA5D618FB649C00B18A7A /* NGHUtils.m */,
+				91CCC4D318F2FFBD00516844 /* NGHAppDelegate.h */,
+				91CCC4D418F2FFBD00516844 /* NGHAppDelegate.m */,
 				91CCC4DF18F2FFBD00516844 /* Images.xcassets */,
 				91CCC4CB18F2FFBD00516844 /* Supporting Files */,
 				91CCC50418F3139800516844 /* Globals.h */,
@@ -356,6 +361,7 @@
 				91CCC4D518F2FFBD00516844 /* NGHAppDelegate.m in Sources */,
 				91CCC4D118F2FFBD00516844 /* main.m in Sources */,
 				9172A00118FB6E6300B36A95 /* NGHSettingsViewController.m in Sources */,
+				E0BEA5DA18FB845200B18A7A /* NGHPeerListeningListVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

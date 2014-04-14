@@ -12,7 +12,8 @@
 @interface NGHAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
 @property (nonatomic, strong) NGHMultipeerSessionManager *sessionManager;
+
++(NGHMultipeerSessionManager*)globalSessionManager;
 
 @end

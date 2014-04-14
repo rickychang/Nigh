@@ -23,6 +23,8 @@
     [NGHUtils opaqueifyStatusBar:self.view];
 }
 
+
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

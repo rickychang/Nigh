@@ -16,8 +16,12 @@
 @property (nonatomic, strong) MCNearbyServiceAdvertiser *advertiser;
 @property (nonatomic, strong) MCNearbyServiceBrowser *browser;
 
+@property (nonatomic, strong) NSMutableDictionary * connectedPeers;
+
 -(void) initPeerWithDisplayName:(NSString *)displayName;
 -(void)startServices;
 -(void)stopServices;
+-(BOOL)hasPeerConnection;
+
 
 @end
