@@ -21,7 +21,9 @@
 -(void) initPeerWithDisplayName:(NSString *)displayName;
 -(void)startServices;
 -(void)stopServices;
+
 -(BOOL)hasPeerConnection;
+-(NSArray*)peerNames;
 
 
 @end

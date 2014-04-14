@@ -263,4 +263,8 @@ withDiscoveryInfo:(NSDictionary *)info {
     return ([[_connectedPeers allKeys] count] > 0);
 }
 
+-(NSArray*)peerNames {
+    return [_connectedPeers allKeys];
+}
+
 @end
