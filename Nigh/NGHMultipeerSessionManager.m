@@ -11,6 +11,8 @@
 #import "NGHMultipeerMessage.h"
 #import "NGHChatMessage.h"
 
+
+
 @implementation NGHMultipeerSessionManager
 
 // TODO: Stop using device name as default display name. Change this to force use to specify a name.
@@ -89,15 +91,23 @@
 
 -(void)startServices {
     [self setupSession];
-    [self.advertiser startAdvertisingPeer];
-    [self.browser startBrowsingForPeers];
+    // if we see crashing behavior, consider implementing a serial queue
+    // rather than putting this on the global queues.
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self.advertiser startAdvertisingPeer];
+        [self.browser startBrowsingForPeers];
+    });
 }
 
 
 -(void)stopServices {
-    [self.browser stopBrowsingForPeers];
-    [self.advertiser stopAdvertisingPeer];
-    [self teardownSession];
+
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self.browser stopBrowsingForPeers];
+        [self.advertiser stopAdvertisingPeer];
+        [self teardownSession];
+    });
 }
 
 -(NSString *)stringForPeerConnectionState:(MCSessionState)state {
@@ -168,26 +178,31 @@
 #pragma mark - MCNearbyServiceBrowserDelegate
 
 // TODO: Handle case when peers have the same name.
-- (void)browser:(MCNearbyServiceBrowser *)browser foundPeer:(MCPeerID *)peerID withDiscoveryInfo:(NSDictionary *)info
-{
-    NSString *remotePeerName = peerID.displayName;
+- (void)browser:(MCNearbyServiceBrowser *)browser
+      foundPeer:(MCPeerID *)peerID
+withDiscoveryInfo:(NSDictionary *)info {
     
-    NSLog(@"Browser found %@", remotePeerName);
-    
-    MCPeerID *myPeerID = self.session.myPeerID;
-    
-    BOOL shouldInvite = ([myPeerID.displayName compare:remotePeerName] == NSOrderedDescending);
-    
-    if (shouldInvite)
-    {
-        NSLog(@"Inviting %@", remotePeerName);
-        [browser invitePeer:peerID toSession:self.session withContext:nil timeout:30.0];
-    }
-    else
-    {
-        NSLog(@"Not inviting %@", remotePeerName);
-    }
-    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+
+
+        NSString *remotePeerName = peerID.displayName;
+        
+        NSLog(@"Browser found %@", remotePeerName);
+        
+        MCPeerID *myPeerID = self.session.myPeerID;
+        
+        BOOL shouldInvite = ([myPeerID.displayName compare:remotePeerName] == NSOrderedDescending);
+        
+        if (shouldInvite)
+        {
+            NSLog(@"Inviting %@", remotePeerName);
+            [browser invitePeer:peerID toSession:self.session withContext:nil timeout:30.0];
+        }
+        else
+        {
+            NSLog(@"Not inviting %@", remotePeerName);
+        }
+    });
 }
 
 
