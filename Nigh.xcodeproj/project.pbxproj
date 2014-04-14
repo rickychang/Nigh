@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		238C7C559A5E40779843138B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6C8254324B419481DAAD05 /* libPods.a */; };
+		91729FFD18FB61CB00B36A95 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 91729FFC18FB61CA00B36A95 /* Settings.bundle */; };
+		9172A00118FB6E6300B36A95 /* NGHSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9172A00018FB6E6300B36A95 /* NGHSettingsViewController.m */; };
 		91CCC4C518F2FFBD00516844 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91CCC4C418F2FFBD00516844 /* Foundation.framework */; };
 		91CCC4C718F2FFBD00516844 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91CCC4C618F2FFBD00516844 /* CoreGraphics.framework */; };
 		91CCC4C918F2FFBD00516844 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91CCC4C818F2FFBD00516844 /* UIKit.framework */; };
@@ -41,6 +43,9 @@
 
 /* Begin PBXFileReference section */
 		5D7FC89DCA894B8D97F7A776 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		91729FFC18FB61CA00B36A95 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = ../Settings.bundle; sourceTree = "<group>"; };
+		91729FFF18FB6E6300B36A95 /* NGHSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGHSettingsViewController.h; path = ../NGHSettingsViewController.h; sourceTree = "<group>"; };
+		9172A00018FB6E6300B36A95 /* NGHSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGHSettingsViewController.m; path = ../NGHSettingsViewController.m; sourceTree = "<group>"; };
 		91CCC4C118F2FFBD00516844 /* Nigh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nigh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91CCC4C418F2FFBD00516844 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		91CCC4C618F2FFBD00516844 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -100,6 +105,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		91729FFE18FB61E300B36A95 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				91729FFC18FB61CA00B36A95 /* Settings.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		91CCC4B818F2FFBD00516844 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +150,9 @@
 		91CCC4CA18F2FFBD00516844 /* Nigh */ = {
 			isa = PBXGroup;
 			children = (
+				91729FFF18FB6E6300B36A95 /* NGHSettingsViewController.h */,
+				9172A00018FB6E6300B36A95 /* NGHSettingsViewController.m */,
+				91729FFE18FB61E300B36A95 /* Resources */,
 				91CCC50018F310F000516844 /* Models */,
 				91CCC4D318F2FFBD00516844 /* NGHAppDelegate.h */,
 				91CCC4D418F2FFBD00516844 /* NGHAppDelegate.m */,
@@ -272,6 +288,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91729FFD18FB61CB00B36A95 /* Settings.bundle in Resources */,
 				91CCC4E018F2FFBD00516844 /* Images.xcassets in Resources */,
 				91CCC4CF18F2FFBD00516844 /* InfoPlist.strings in Resources */,
 				91CCC4D818F2FFBD00516844 /* Main.storyboard in Resources */,
@@ -332,6 +349,7 @@
 				91D21D2C18F71AB100ECA489 /* NGHChatMessage.m in Sources */,
 				91CCC4D518F2FFBD00516844 /* NGHAppDelegate.m in Sources */,
 				91CCC4D118F2FFBD00516844 /* main.m in Sources */,
+				9172A00118FB6E6300B36A95 /* NGHSettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

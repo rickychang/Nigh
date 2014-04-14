@@ -6,6 +6,12 @@
 // project.
 
 
+// InAppSettingsKit
+#define COCOAPODS_POD_AVAILABLE_InAppSettingsKit
+#define COCOAPODS_VERSION_MAJOR_InAppSettingsKit 2
+#define COCOAPODS_VERSION_MINOR_InAppSettingsKit 0
+#define COCOAPODS_VERSION_PATCH_InAppSettingsKit 1
+
 // JSMessagesViewController
 #define COCOAPODS_POD_AVAILABLE_JSMessagesViewController
 #define COCOAPODS_VERSION_MAJOR_JSMessagesViewController 4
