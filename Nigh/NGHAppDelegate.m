@@ -13,6 +13,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     _sessionManager = [[NGHMultipeerSessionManager alloc] init];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *name = [defaults stringForKey:@"name_preference"];
+    NSLog(@"%@", name);
     return YES;
 }
 							
