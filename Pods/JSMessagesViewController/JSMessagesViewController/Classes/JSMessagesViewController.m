@@ -432,7 +432,7 @@
 - (UIEdgeInsets)tableViewInsetsWithBottomValue:(CGFloat)bottom
 {
     // UIEdgeInsets insets = UIEdgeInsetsZero;
-    float offset = 28.0;
+    float offset = 22.0;
     UIEdgeInsets insets = UIEdgeInsetsMake(offset,
                                            0,
                                            bottom,

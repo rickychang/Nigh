@@ -30,8 +30,6 @@
     
     [[JSBubbleView appearance] setFont:[UIFont systemFontOfSize:16.0f]];
     
-    self.title = @"Group Chat";
-    
     self.messageInputView.textView.placeHolder = @"New Message";
     
     self.sessionManager = ((NGHAppDelegate*)[[UIApplication sharedApplication] delegate]).sessionManager;

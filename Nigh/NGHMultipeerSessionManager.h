@@ -19,5 +19,6 @@
 -(void) initPeerWithDisplayName:(NSString *)displayName;
 -(void)startServices;
 -(void)stopServices;
+-(void)inAppSettingChanged:(NSNotification *)notification;
 
 @end

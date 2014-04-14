@@ -28,6 +28,7 @@
 #pragma mark -
 #pragma mark IASKAppSettingsViewControllerDelegate protocol
 - (void)settingsViewControllerDidEnd:(IASKAppSettingsViewController*)sender {
+    NSLog(@"settingsViewControllerDidEnd");
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

@@ -10,6 +10,7 @@
 #import <JSMessagesViewController/JSMessage.h>
 #import "NGHMultipeerMessage.h"
 #import "NGHChatMessage.h"
+#import <InAppSettingsKit/IASKSettingsReader.h>
 
 
 
@@ -41,6 +42,11 @@
         [defaultCenter addObserver:self
                           selector:@selector(stopServices)
                               name:UIApplicationDidEnterBackgroundNotification
+                            object:nil];
+        
+        [defaultCenter addObserver:self
+                          selector:@selector(inAppSettingChanged:)
+                              name:kIASKAppSettingChanged
                             object:nil];
         
         [self startServices];
@@ -112,16 +118,17 @@
     });
 }
 
--(NSString *)stringForPeerConnectionState:(MCSessionState)state {
-    switch (state) {
-        case MCSessionStateConnected:
-            return @"Connected";
-            
-        case MCSessionStateConnecting:
-            return @"Connecting";
-            
-        case MCSessionStateNotConnected:
-            return @"Not Connected";
+-(void)restartServices {
+    [self stopServices];
+    [self startServices];
+}
+
+// TODO: Use a different notification because this is being called too oftern.
+-(void)inAppSettingChanged:(NSNotification *)notification {
+    NSString *key = (NSString *)[notification object];
+    if ([key isEqualToString:@"name_preference"]) {
+        NSLog(@"name changed, restarting services");
+        [self restartServices];
     }
 }
 
@@ -129,7 +136,6 @@
 
 
 -(void)session:(MCSession *)session peer:(MCPeerID *)peerID didChangeState:(MCSessionState)state {
-    NSLog(@"Peer [%@] changed state to %@", peerID.displayName, [self stringForPeerConnectionState:state]);
     NSDictionary *dict = @{@"peerID": peerID,
                            @"state" : [NSNumber numberWithInt:state]
                            };

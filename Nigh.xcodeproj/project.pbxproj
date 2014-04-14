@@ -153,8 +153,6 @@
 		91CCC4CA18F2FFBD00516844 /* Nigh */ = {
 			isa = PBXGroup;
 			children = (
-				91729FFF18FB6E6300B36A95 /* NGHSettingsViewController.h */,
-				9172A00018FB6E6300B36A95 /* NGHSettingsViewController.m */,
 				91729FFE18FB61E300B36A95 /* Resources */,
 				91CCC50018F310F000516844 /* Models */,
 				91CCC4D318F2FFBD00516844 /* NGHAppDelegate.h */,
@@ -164,6 +162,8 @@
 				91CCC4DA18F2FFBD00516844 /* NGHChatViewController.m */,
 				91CCC4DC18F2FFBD00516844 /* NGHPeersViewController.h */,
 				91CCC4DD18F2FFBD00516844 /* NGHPeersViewController.m */,
+				91729FFF18FB6E6300B36A95 /* NGHSettingsViewController.h */,
+				9172A00018FB6E6300B36A95 /* NGHSettingsViewController.m */,
 				E0BEA5D518FB649C00B18A7A /* NGHUtils.h */,
 				E0BEA5D618FB649C00B18A7A /* NGHUtils.m */,
 				91CCC4DF18F2FFBD00516844 /* Images.xcassets */,
