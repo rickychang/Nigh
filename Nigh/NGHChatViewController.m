@@ -25,6 +25,7 @@
     self.dataSource = self;
     [super viewDidLoad];
     
+    NSLog(@"view frame: %@\n", NSStringFromCGRect(self.view.frame));
     
     [[JSBubbleView appearance] setFont:[UIFont systemFontOfSize:16.0f]];
     

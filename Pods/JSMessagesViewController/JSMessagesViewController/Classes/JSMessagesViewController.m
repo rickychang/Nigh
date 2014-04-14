@@ -59,12 +59,16 @@
     JSMessageInputViewStyle inputViewStyle = [self.delegate inputViewStyle];
     CGFloat inputViewHeight = (inputViewStyle == JSMessageInputViewStyleFlat) ? 45.0f : 40.0f;
     
-	JSMessageTableView *tableView = [[JSMessageTableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+    JSMessageTableView *tableView = [[JSMessageTableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+    
 	tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	tableView.dataSource = self;
 	tableView.delegate = self;
 	[self.view addSubview:tableView];
 	_tableView = tableView;
+    
+    NSLog(@"tableView frame: %@\n", NSStringFromCGRect(tableView.frame));
+    
     
     [self setTableViewInsetsWithBottomValue:inputViewHeight];
     
@@ -427,10 +431,17 @@
 
 - (UIEdgeInsets)tableViewInsetsWithBottomValue:(CGFloat)bottom
 {
-    UIEdgeInsets insets = UIEdgeInsetsZero;
+    // UIEdgeInsets insets = UIEdgeInsetsZero;
+    float offset = 28.0;
+    UIEdgeInsets insets = UIEdgeInsetsMake(offset,
+                                           0,
+                                           bottom,
+                                           0);
+    
+    
     
     if ([self respondsToSelector:@selector(topLayoutGuide)]) {
-        insets.top = self.topLayoutGuide.length;
+        // insets.top = self.topLayoutGuide.length;
     }
     
     insets.bottom = bottom;
