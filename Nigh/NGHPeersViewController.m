@@ -7,6 +7,7 @@
 //
 
 #import "NGHPeersViewController.h"
+#import "NGHUtils.h"
 
 @interface NGHPeersViewController ()
 
@@ -18,6 +19,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    [NGHUtils opaqueifyStatusBar:self.view];
 }
 
 - (void)didReceiveMemoryWarning

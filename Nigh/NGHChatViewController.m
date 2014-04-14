@@ -10,6 +10,7 @@
 #import "NGHAppDelegate.h"
 #import <JSMessagesViewController/JSMessage.h>
 #import "NGHChatMessage.h"
+#import "NGHUtils.h"
 
 @interface NGHChatViewController ()
 
@@ -25,7 +26,7 @@
     self.dataSource = self;
     [super viewDidLoad];
     
-    NSLog(@"view frame: %@\n", NSStringFromCGRect(self.view.frame));
+    
     
     [[JSBubbleView appearance] setFont:[UIFont systemFontOfSize:16.0f]];
     
@@ -57,6 +58,9 @@
                                                object:nil];
     
     [self setBackgroundColor:[UIColor whiteColor]];
+    
+    
+    [NGHUtils opaqueifyStatusBar:self.view];
 }
 
 - (void)viewWillAppear:(BOOL)animated
