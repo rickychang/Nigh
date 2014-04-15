@@ -16,7 +16,7 @@
 @property (nonatomic, strong) MCNearbyServiceAdvertiser *advertiser;
 @property (nonatomic, strong) MCNearbyServiceBrowser *browser;
 
--(void) initPeerWithDisplayName:(NSString *)displayName;
+-(void)initPeerWithDisplayName:(NSString *)displayName;
 -(void)startServices;
 -(void)stopServices;
 -(void)inAppSettingChanged:(NSNotification *)notification;

@@ -28,9 +28,9 @@ typedef NS_ENUM(NSUInteger, NGHMessageType) {
 
 @required
 
+
 /**
- *  @return The text of the message.
- *  @warning This value must not be `nil`.
+ * @return The text representation of this message.
  */
 - (NSString *)text;
 

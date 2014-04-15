@@ -10,6 +10,8 @@
 		238C7C559A5E40779843138B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6C8254324B419481DAAD05 /* libPods.a */; };
 		91729FFD18FB61CB00B36A95 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 91729FFC18FB61CA00B36A95 /* Settings.bundle */; };
 		9172A00118FB6E6300B36A95 /* NGHSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9172A00018FB6E6300B36A95 /* NGHSettingsViewController.m */; };
+		91B3488818FC31870052CD29 /* NGHSongInfoMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B3488718FC31870052CD29 /* NGHSongInfoMessage.m */; };
+		91B3488B18FC98BC0052CD29 /* NGHMPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B3488A18FC98BC0052CD29 /* NGHMPlayerManager.m */; };
 		91CCC4C518F2FFBD00516844 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91CCC4C418F2FFBD00516844 /* Foundation.framework */; };
 		91CCC4C718F2FFBD00516844 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91CCC4C618F2FFBD00516844 /* CoreGraphics.framework */; };
 		91CCC4C918F2FFBD00516844 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91CCC4C818F2FFBD00516844 /* UIKit.framework */; };
@@ -47,6 +49,10 @@
 		91729FFC18FB61CA00B36A95 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = ../Settings.bundle; sourceTree = "<group>"; };
 		91729FFF18FB6E6300B36A95 /* NGHSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGHSettingsViewController.h; path = ../NGHSettingsViewController.h; sourceTree = "<group>"; };
 		9172A00018FB6E6300B36A95 /* NGHSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGHSettingsViewController.m; path = ../NGHSettingsViewController.m; sourceTree = "<group>"; };
+		91B3488618FC31870052CD29 /* NGHSongInfoMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGHSongInfoMessage.h; sourceTree = "<group>"; };
+		91B3488718FC31870052CD29 /* NGHSongInfoMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGHSongInfoMessage.m; sourceTree = "<group>"; };
+		91B3488918FC98BC0052CD29 /* NGHMPlayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGHMPlayerManager.h; sourceTree = "<group>"; };
+		91B3488A18FC98BC0052CD29 /* NGHMPlayerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGHMPlayerManager.m; sourceTree = "<group>"; };
 		91CCC4C118F2FFBD00516844 /* Nigh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nigh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91CCC4C418F2FFBD00516844 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		91CCC4C618F2FFBD00516844 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -207,9 +213,13 @@
 			children = (
 				91CCC50118F311CE00516844 /* NGHMultipeerSessionManager.h */,
 				91CCC50218F311CE00516844 /* NGHMultipeerSessionManager.m */,
+				91B3488918FC98BC0052CD29 /* NGHMPlayerManager.h */,
+				91B3488A18FC98BC0052CD29 /* NGHMPlayerManager.m */,
 				91D21D2918F718D200ECA489 /* NGHMultipeerMessage.h */,
 				91D21D2A18F71AB100ECA489 /* NGHChatMessage.h */,
 				91D21D2B18F71AB100ECA489 /* NGHChatMessage.m */,
+				91B3488618FC31870052CD29 /* NGHSongInfoMessage.h */,
+				91B3488718FC31870052CD29 /* NGHSongInfoMessage.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -352,8 +362,10 @@
 				91CCC4DE18F2FFBD00516844 /* NGHPeersViewController.m in Sources */,
 				91CCC50318F311CE00516844 /* NGHMultipeerSessionManager.m in Sources */,
 				91CCC4DB18F2FFBD00516844 /* NGHChatViewController.m in Sources */,
+				91B3488B18FC98BC0052CD29 /* NGHMPlayerManager.m in Sources */,
 				91D21D2C18F71AB100ECA489 /* NGHChatMessage.m in Sources */,
 				91CCC4D518F2FFBD00516844 /* NGHAppDelegate.m in Sources */,
+				91B3488818FC31870052CD29 /* NGHSongInfoMessage.m in Sources */,
 				91CCC4D118F2FFBD00516844 /* main.m in Sources */,
 				9172A00118FB6E6300B36A95 /* NGHSettingsViewController.m in Sources */,
 			);
