@@ -73,7 +73,7 @@
             </objects>
             <point key="canvasLocation" x="1499" y="-253"/>
         </scene>
-        <!--View Controller - Listen-->
+        <!--View Controller - Listen to Peers-->
         <scene sceneID="MAA-2Q-XAM">
             <objects>
                 <viewController id="Xay-a6-pvu" sceneMemberID="viewController">
@@ -95,11 +95,102 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Listen" image="music-outline" id="tQD-cY-FcM"/>
+                    <tabBarItem key="tabBarItem" title="Listen to Peers" image="music-outline" id="tQD-cY-FcM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vLn-M1-0wx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1101" y="517"/>
+        </scene>
+        <!--Music Player View Controller - Listen to Library-->
+        <scene sceneID="Z6m-hs-D4O">
+            <objects>
+                <viewController id="Oyj-VW-UCu" customClass="NGHMusicPlayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6io-57-VDI"/>
+                        <viewControllerLayoutGuide type="bottom" id="Q2K-0p-bL8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6rz-VS-Hcu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkA-uC-kQd">
+                                <rect key="frame" x="150" y="429" width="25" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="play-solid">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playPause:" destination="Oyj-VW-UCu" eventType="touchUpInside" id="cgn-yh-vxf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeK-7u-RiS">
+                                <rect key="frame" x="194" y="429" width="30" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="fast-forward-solid">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextSong:" destination="Oyj-VW-UCu" eventType="touchUpInside" id="Ryf-UW-tfd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUi-h7-DZz">
+                                <rect key="frame" x="96" y="429" width="30" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="rewind-solid">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="previousSong:" destination="Oyj-VW-UCu" eventType="touchUpInside" id="fbd-Dl-ygm"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="svy-7K-dc0">
+                                <rect key="frame" x="40" y="67" width="240" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPH-Js-Ttd">
+                                <rect key="frame" x="138" y="353" width="48" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Artist – Ablum" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqr-6b-wme">
+                                <rect key="frame" x="108" y="393" width="108" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uaz-A7-KGA">
+                                <rect key="frame" x="89" y="315" width="143" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Show Media Picker">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showMediaPicker:" destination="Oyj-VW-UCu" eventType="touchUpInside" id="gpK-fl-JuP"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="N1V-uT-wAH">
+                                <rect key="frame" x="38" y="469" width="244" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="volumeChanged:" destination="Oyj-VW-UCu" eventType="valueChanged" id="7wJ-h2-Chf"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Listen to Library" image="play-solid" id="7da-xV-ew9"/>
+                    <connections>
+                        <outlet property="artistAlbumLabel" destination="iqr-6b-wme" id="K7o-1n-05X"/>
+                        <outlet property="artworkImageView" destination="svy-7K-dc0" id="cE1-KH-1ti"/>
+                        <outlet property="playPauseButton" destination="bkA-uC-kQd" id="3mP-rz-Ptw"/>
+                        <outlet property="titleLabel" destination="kPH-Js-Ttd" id="Owx-nq-09C"/>
+                        <outlet property="volumeSlider" destination="N1V-uT-wAH" id="l4Q-yk-Vb8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hLX-Fo-SVn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1541" y="569"/>
         </scene>
         <!--Peers View Controller - Second-->
         <scene sceneID="ot8-2e-RuS">
@@ -143,6 +234,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="CZ4-MO-1fc" kind="relationship" relationship="viewControllers" id="SUk-Ux-ee1"/>
+                        <segue destination="Oyj-VW-UCu" kind="relationship" relationship="viewControllers" id="siL-HL-KDk"/>
                         <segue destination="Xay-a6-pvu" kind="relationship" relationship="viewControllers" id="6EQ-vm-CD7"/>
                         <segue destination="QUy-BD-bpt" kind="relationship" relationship="viewControllers" id="M8t-EP-wfW"/>
                         <segue destination="8qd-Yg-AnL" kind="relationship" relationship="viewControllers" id="7Gu-ah-Rfv"/>
@@ -155,8 +247,11 @@
     </scenes>
     <resources>
         <image name="chat-outline" width="25" height="20"/>
+        <image name="fast-forward-solid" width="30" height="22"/>
         <image name="music-outline" width="22" height="25"/>
         <image name="peers-outline" width="31" height="29"/>
+        <image name="play-solid" width="17" height="22"/>
+        <image name="rewind-solid" width="30" height="22"/>
         <image name="settings-outline" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
