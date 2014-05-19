@@ -6,6 +6,12 @@
 // project.
 
 
+// GVMusicPlayerController
+#define COCOAPODS_POD_AVAILABLE_GVMusicPlayerController
+#define COCOAPODS_VERSION_MAJOR_GVMusicPlayerController 0
+#define COCOAPODS_VERSION_MINOR_GVMusicPlayerController 4
+#define COCOAPODS_VERSION_PATCH_GVMusicPlayerController 0
+
 // InAppSettingsKit
 #define COCOAPODS_POD_AVAILABLE_InAppSettingsKit
 #define COCOAPODS_VERSION_MAJOR_InAppSettingsKit 2
@@ -21,7 +27,7 @@
 // JSQSystemSoundPlayer
 #define COCOAPODS_POD_AVAILABLE_JSQSystemSoundPlayer
 #define COCOAPODS_VERSION_MAJOR_JSQSystemSoundPlayer 1
-#define COCOAPODS_VERSION_MINOR_JSQSystemSoundPlayer 4
+#define COCOAPODS_VERSION_MINOR_JSQSystemSoundPlayer 5
 #define COCOAPODS_VERSION_PATCH_JSQSystemSoundPlayer 0
 
 // TDAudioPlayer

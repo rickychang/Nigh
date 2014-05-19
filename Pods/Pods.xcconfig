@@ -1,5 +1,5 @@
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/InAppSettingsKit" "${PODS_ROOT}/Headers/JSMessagesViewController" "${PODS_ROOT}/Headers/JSQSystemSoundPlayer" "${PODS_ROOT}/Headers/TDAudioPlayer"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers" -isystem "${PODS_ROOT}/Headers/InAppSettingsKit" -isystem "${PODS_ROOT}/Headers/JSMessagesViewController" -isystem "${PODS_ROOT}/Headers/JSQSystemSoundPlayer" -isystem "${PODS_ROOT}/Headers/TDAudioPlayer"
-OTHER_LDFLAGS = -ObjC -framework AVFoundation -framework AudioToolbox -framework MediaPlayer -framework MessageUI -framework QuartzCore
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/GVMusicPlayerController" "${PODS_ROOT}/Headers/InAppSettingsKit" "${PODS_ROOT}/Headers/JSMessagesViewController" "${PODS_ROOT}/Headers/JSQSystemSoundPlayer" "${PODS_ROOT}/Headers/TDAudioPlayer"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers" -isystem "${PODS_ROOT}/Headers/GVMusicPlayerController" -isystem "${PODS_ROOT}/Headers/InAppSettingsKit" -isystem "${PODS_ROOT}/Headers/JSMessagesViewController" -isystem "${PODS_ROOT}/Headers/JSQSystemSoundPlayer" -isystem "${PODS_ROOT}/Headers/TDAudioPlayer"
+OTHER_LDFLAGS = -ObjC -framework AVFoundation -framework AudioToolbox -framework CoreMedia -framework MediaPlayer -framework MessageUI -framework QuartzCore
 PODS_ROOT = ${SRCROOT}/Pods
