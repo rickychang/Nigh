@@ -7,6 +7,7 @@
 //
 
 #import "NGHAppDelegate.h"
+#import <AVFoundation/AVAudioSession.h>
 
 @implementation NGHAppDelegate
 
@@ -16,6 +17,9 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *name = [defaults stringForKey:@"name_preference"];
     NSLog(@"%@", name);
+    AVAudioSession* audio = [[AVAudioSession alloc] init];
+	[audio setCategory: AVAudioSessionCategoryPlayback error: nil];
+	[audio setActive: YES error: nil];
     return YES;
 }
 							

@@ -1,19 +1,22 @@
 PODS:
+  - GVMusicPlayerController (0.4.0)
   - InAppSettingsKit (2.0.1)
   - JSMessagesViewController (4.0.2):
     - JSQSystemSoundPlayer
-  - JSQSystemSoundPlayer (1.4.0)
+  - JSQSystemSoundPlayer (1.5.0)
   - TDAudioPlayer (0.0.5)
 
 DEPENDENCIES:
+  - GVMusicPlayerController (~> 0.4.0)
   - InAppSettingsKit
   - JSMessagesViewController
   - TDAudioPlayer
 
 SPEC CHECKSUMS:
+  GVMusicPlayerController: 65271ec54f3aab122d8ea517f7b841479ec3e842
   InAppSettingsKit: 5e42f626b9be9c33e3b04c0cc9523ca5eabe7ad3
   JSMessagesViewController: 901c4f7b805e0990705d92eee8069562ac85bf9b
-  JSQSystemSoundPlayer: 28ccd01a92a0cebc6de6361e8499011b4cb6dab7
+  JSQSystemSoundPlayer: 6dbac8dcc33e3add6facb3e59451a0249aece17d
   TDAudioPlayer: e246c80c4b3c77eb764c7f49f011ab15c2d67470
 
-COCOAPODS: 0.31.1
+COCOAPODS: 0.32.1

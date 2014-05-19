@@ -82,9 +82,21 @@
 -(void)multipeerMessageReceivedNotification:(NSNotification *)notification {
     NSLog(@"multipeerMessageReceivedNoficiation called");
     NGHChatMessage *incomingMessage = [[notification userInfo] objectForKey:@"incomingMessage"];
-    [self.messages addObject:incomingMessage];
-    [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
-    [self performSelectorOnMainThread:@selector(scrollToBottomAnimated:) withObject:@"1" waitUntilDone:NO];
+    if ([[UIApplication sharedApplication] applicationState] == UIApplicationStateActive)
+    {
+        [self.messages addObject:incomingMessage];
+        [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
+        [self performSelectorOnMainThread:@selector(scrollToBottomAnimated:) withObject:@"1" waitUntilDone:NO];
+    } else {
+        UILocalNotification *notification = [[UILocalNotification alloc] init];
+        notification.alertBody = incomingMessage.text;
+        notification.alertAction = @"OK";
+        notification.fireDate = [NSDate date];
+        notification.soundName = UILocalNotificationDefaultSoundName;
+        [[UIApplication sharedApplication]
+         scheduleLocalNotification:notification];
+    }
+
 
 
 }

@@ -34,15 +34,15 @@
         NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
         
         // Register for notifications
-        [defaultCenter addObserver:self
-                          selector:@selector(startServices)
-                              name:UIApplicationWillEnterForegroundNotification
-                            object:nil];
-        
-        [defaultCenter addObserver:self
-                          selector:@selector(stopServices)
-                              name:UIApplicationDidEnterBackgroundNotification
-                            object:nil];
+//        [defaultCenter addObserver:self
+//                          selector:@selector(startServices)
+//                              name:UIApplicationWillEnterForegroundNotification
+//                            object:nil];
+//        
+//        [defaultCenter addObserver:self
+//                          selector:@selector(stopServices)
+//                              name:UIApplicationDidEnterBackgroundNotification
+//                            object:nil];
         
         [defaultCenter addObserver:self
                           selector:@selector(inAppSettingChanged:)
@@ -110,6 +110,7 @@
 
 
 -(void)stopServices {
+    NSLog(@"Stop services running.");
 
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [self.browser stopBrowsingForPeers];
@@ -155,6 +156,9 @@
             [[NSNotificationCenter defaultCenter] postNotificationName:@"NGHChatMessageReceived"
                                                                 object:nil
                                                               userInfo: @{@"incomingMessage": incomingMessage}];
+            break;
+        case NGHMessageTypeSongInfo:
+            NSLog(@"Incoming songinfo message: %@", [incomingMessage text]);
             break;
         default:
             NSLog(@"Unhandled incoming message: %@", [incomingMessage text]);

@@ -7,28 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MediaPlayer/MediaPlayer.h>
+#import "NGHMultipeerSessionManager.h"
 
-@interface NGHMusicPlayerViewController : UIViewController <MPMediaPickerControllerDelegate> {
-    
-    IBOutlet UIImageView *artworkImageView;
-    IBOutlet UISlider *volumeSlider;
-    IBOutlet UIButton *playPauseButton;
-    
-    IBOutlet UILabel *titleLabel;
-    IBOutlet UILabel *artistAlbumLabel;
-    
-    MPMusicPlayerController *musicPlayer;
-    
-}
-@property (nonatomic, retain) MPMusicPlayerController *musicPlayer;
+@interface NGHMusicPlayerViewController : UIViewController
 
-- (IBAction)volumeChanged:(id)sender;
-- (IBAction)showMediaPicker:(id)sender;
-- (IBAction)previousSong:(id)sender;
-- (IBAction)playPause:(id)sender;
-- (IBAction)nextSong:(id)sender;
+@property (strong, nonatomic) NGHMultipeerSessionManager *sessionManager;
 
-- (void) registerMediaPlayerNotifications;
 
 @end
